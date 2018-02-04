@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F2013F032019C7F0008F3DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2013F022019C7F0008F3DA2 /* AppDelegate.swift */; };
-		F2013F052019C7F0008F3DA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2013F042019C7F0008F3DA2 /* ViewController.swift */; };
 		F2013F082019C7F0008F3DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2013F062019C7F0008F3DA2 /* Main.storyboard */; };
 		F2013F0A2019C7F0008F3DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2013F092019C7F0008F3DA2 /* Assets.xcassets */; };
 		F2013F0D2019C7F0008F3DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2013F0B2019C7F0008F3DA2 /* LaunchScreen.storyboard */; };
 		F2013F182019C7F0008F3DA2 /* RemainderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2013F172019C7F0008F3DA2 /* RemainderAppTests.swift */; };
 		F2013F232019C7F1008F3DA2 /* RemainderAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2013F222019C7F1008F3DA2 /* RemainderAppUITests.swift */; };
+		F2013F312019CBA8008F3DA2 /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2013F302019CBA8008F3DA2 /* ReminderTableViewController.swift */; };
+		F2013F332019E352008F3DA2 /* RemainderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2013F322019E352008F3DA2 /* RemainderViewController.swift */; };
+		F203405B2022E93600B25466 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F203405A2022E93600B25466 /* UserNotifications.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F2013EFF2019C7EF008F3DA2 /* RemainderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemainderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2013F022019C7F0008F3DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2013F042019C7F0008F3DA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F2013F072019C7F0008F3DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2013F092019C7F0008F3DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2013F0C2019C7F0008F3DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		F2013F1E2019C7F1008F3DA2 /* RemainderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemainderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2013F222019C7F1008F3DA2 /* RemainderAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainderAppUITests.swift; sourceTree = "<group>"; };
 		F2013F242019C7F1008F3DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2013F302019CBA8008F3DA2 /* ReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderTableViewController.swift; path = ../ReminderTableViewController.swift; sourceTree = "<group>"; };
+		F2013F322019E352008F3DA2 /* RemainderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainderViewController.swift; sourceTree = "<group>"; };
+		F203405A2022E93600B25466 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F203405B2022E93600B25466 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				F2013F162019C7F0008F3DA2 /* RemainderAppTests */,
 				F2013F212019C7F1008F3DA2 /* RemainderAppUITests */,
 				F2013F002019C7EF008F3DA2 /* Products */,
+				F20340592022E93600B25466 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				F2013F022019C7F0008F3DA2 /* AppDelegate.swift */,
-				F2013F042019C7F0008F3DA2 /* ViewController.swift */,
+				F2013F302019CBA8008F3DA2 /* ReminderTableViewController.swift */,
+				F2013F322019E352008F3DA2 /* RemainderViewController.swift */,
 				F2013F062019C7F0008F3DA2 /* Main.storyboard */,
 				F2013F092019C7F0008F3DA2 /* Assets.xcassets */,
 				F2013F0B2019C7F0008F3DA2 /* LaunchScreen.storyboard */,
@@ -123,6 +130,14 @@
 				F2013F242019C7F1008F3DA2 /* Info.plist */,
 			);
 			path = RemainderAppUITests;
+			sourceTree = "<group>";
+		};
+		F20340592022E93600B25466 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F203405A2022E93600B25466 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2013F052019C7F0008F3DA2 /* ViewController.swift in Sources */,
 				F2013F032019C7F0008F3DA2 /* AppDelegate.swift in Sources */,
+				F2013F332019E352008F3DA2 /* RemainderViewController.swift in Sources */,
+				F2013F312019CBA8008F3DA2 /* ReminderTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +523,7 @@
 				F2013F292019C7F1008F3DA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2013F2A2019C7F1008F3DA2 /* Build configuration list for PBXNativeTarget "RemainderAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +532,7 @@
 				F2013F2C2019C7F1008F3DA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2013F2D2019C7F1008F3DA2 /* Build configuration list for PBXNativeTarget "RemainderAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +541,7 @@
 				F2013F2F2019C7F1008F3DA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
